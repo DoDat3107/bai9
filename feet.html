@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function convert() {
+
+            var met = parseFloat(document.getElementById("met").value);
+
+        
+            if (!isNaN(met)) {
+            
+                var feet = (met*3.2808)
+
+               
+                document.getElementById("result").innerHTML = met + " met = " + feet + " feet";
+            } else {
+               
+                document.getElementById("result").innerHTML = "Vui lòng nhập một số hợp lệ.";
+            }
+        }
+    </script>
+    </head>
+
+    <body>
+
+        <h2>Chuyển đổi từ met sang feet</h2>
+
+        <p>Nhập met: <input type="text" id="met"></p>
+        <button onclick="convert()">Chuyển đổi</button>
+
+        <p id="result"></p>
+
+    </body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function convert() {
+
+            var độC = parseFloat(document.getElementById("độC").value);
+
+            // !isNaN kiểm tra chỉ nhận giá trị số
+            if (!isNaN(độC)) {
+                // Tính độ F[]
+                var độf = (độC   * 9 / 5) + 32;
+
+               
+                document.getElementById("result").innerHTML = độC + " độ C = " + độf + " độ F";
+            } else {
+               
+                document.getElementById("result").innerHTML = "Vui lòng nhập một số hợp lệ.";
+            }
+        }
+    </script>
+    </head>
+
+    <body>
+
+        <h2>Chuyển đổi từ độ C sang độ F</h2>
+
+        <p>Nhập độ C: <input type="text" id="độC"></p>
+        <button onclick="convert()">Chuyển đổi</button>
+
+        <p id="result"></p>
+
+    </body>
+
+</html>

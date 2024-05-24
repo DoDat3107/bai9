@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function convert() {
+
+            var a = parseFloat(document.getElementById("a").value);
+            var b = parseFloat(document.getElementById("b").value);
+
+          
+            if (!isNaN(a && b)) {
+            
+                var S = (a*b)/2
+
+               
+                document.getElementById("result").innerHTML = "  Diện tích =" + S;
+            } else {
+               
+                document.getElementById("result").innerHTML = "Vui lòng nhập một số hợp lệ.";
+            }
+        }
+    </script>
+    </head>
+
+    <body>
+
+        <h2>Diện tích hình tam giác vuông</h2>
+
+        <p>Nhập cạnh a: <input type="text" id="a"></p>
+        <p>Nhập cạnh b: <input type="text" id="b"></p>
+        <button onclick="convert()">kết quả</button>
+
+        <p id="result"></p>
+
+    </body>
+
+</html>

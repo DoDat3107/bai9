@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a = +prompt("thu nhập cá nhân:");
+        if (a > 1000000 && a < 2000000) {
+            let h = a * 10/100
+                alert("đóng thuế=" + h+"VND")
+        }
+        else if (a > 2000000 && a < 5000000) {
+            let h = a * 15/100
+                alert("đóng thuế="+h+"VND")
+        }
+        else if (a > 5000000 && a < 8000000) {
+            let h=a*20/100
+            alert("đóng thuế="+h+"VND")
+        }
+        else if (a > 8000000) {
+            let h=a*25/100
+            alert(" đóng thuế="+h+"VND")
+
+        }
+    </script>
+</body>
+
+</html>

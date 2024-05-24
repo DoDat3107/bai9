@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function convert() {
+
+            var a = parseFloat(document.getElementById("a").value);
+
+          
+            if (!isNaN(a)) {
+            
+                var S = (a*a)
+
+               
+                document.getElementById("result").innerHTML = " cạnh = "+  a  + " => Diện tích =" + S;
+            } else {
+               
+                document.getElementById("result").innerHTML = "Vui lòng nhập một số hợp lệ.";
+            }
+        }
+    </script>
+    </head>
+
+    <body>
+
+        <h2>Diện tích hình vuông</h2>
+
+        <p>Nhập cạnh: <input type="text" id="a"></p>
+        <button onclick="convert()">kết quả</button>
+
+        <p id="result"></p>
+
+    </body>
+
+</html>

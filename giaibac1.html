@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Nhập các hệ số của phương trình ax + b = 0</h2>
+
+<p for="a">Nhập a:</p>
+<input type="number" id="a" name="a"><br><br>
+
+<p for="b">Nhập b:</p>
+<input type="number" id="b" name="b"><br><br>
+
+<button onclick="giaiPhuongTrinh()">Giải phương trình</button><br><br>
+
+<p id="ketqua"></p>
+
+<script>
+function giaiPhuongTrinh() {
+  
+    let a = document.getElementById("a").value;
+    let b = document.getElementById("b").value;   
+    a = parseFloat(a);
+    b = parseFloat(b);
+    
+    // Kiểm tra nếu a bằng 0
+    if (a === 0) {
+        // Phương trình vô nghiệm nếu a = 0 và b != 0
+        if (b !== 0) {
+            document.getElementById("ketqua").innerHTML = "Phương trình vô nghiệm";
+        } else {
+            // Phương trình có vô số nghiệm nếu cả a và b đều bằng 0
+            document.getElementById("ketqua").innerHTML = "Phương trình có vô số nghiệm";
+        }
+    } else {
+        // Giải phương trình và hiển thị kết quả
+        var x = -b / a;
+        document.getElementById("ketqua").innerHTML = "Nghiệm của phương trình là: x = " + x;
+    }
+}
+</script>
+</body>
+</html>
